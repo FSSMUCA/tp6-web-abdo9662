@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fff7c2, #e7d4ff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #FFB800, #9D4EDD);
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.calculator {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    max-width: 400px;
+    width: 100%;
+    border: 2px solid rgba(157,78,221,0.15);
+    transition: 0.3s ease-in-out;
+}
+.calculator:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+label { 
+    display: block; 
+    margin-bottom: 0.3rem; 
+    font-weight: 600;
+    color: #553C9A;
+}
+input, select {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 7px;
+    border: 1px solid #c2b5f0;
+    transition: 0.25s;
+    background: #faf8ff;
+}
+input:focus, select:focus {
+    border-color: #9D4EDD;
+    background: white;
+    box-shadow: 0 0 8px rgba(157,78,221,0.4);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #9D4EDD, #C77DFF);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: linear-gradient(90deg, #8A3AC5, #B86CFF);
+    transform: translateY(-2px);
+}
+
+#errorMsg { 
+    color: #D10A0A; 
+    margin: 0.5rem 0; 
+    font-weight: bold;
+}
+
+.history { 
+    margin-top: 2rem; 
+}
+.history h2 { 
+    margin-bottom: 1rem; 
+    text-align: center; 
+    color: #4A148C;
+}
+#historyList { 
+    list-style: none; 
+}
+#historyList li {
+    background: linear-gradient(90deg, #E0BBFF, #F3E8FF);
+    margin-bottom: 0.6rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(157,78,221,0.2);
+    transition: 0.3s;
+}
+#historyList li:hover {
+    background: linear-gradient(90deg, #D5A6FF, #EAD6FF);
+    transform: scale(1.02);
+}
+
+footer {
+    background: linear-gradient(90deg, #FFD400, #8A2BE2);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+footer a { color: white; text-decoration: underline; }
+
+@media (max-width: 500px) {
+    main { padding: 1rem; }
+}
+@media (max-width: 400px) {
+    .calculator { padding: 1.2rem; }
+}
